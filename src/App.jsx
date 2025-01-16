@@ -11,7 +11,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 
 // Initialize Google Analytics
-const TRACKING_ID = "GTM-PLWLGSBB"; // Replace with your Measurement ID
+const TRACKING_ID = "GTM-PLWLGSBB"; 
 ReactGA.initialize(TRACKING_ID);
 
 // Component to track page views

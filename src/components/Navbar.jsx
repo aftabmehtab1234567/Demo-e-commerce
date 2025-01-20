@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaSearch, FaShoppingCart, FaUser, FaBars } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux"; // Import useSelector
 import { setSearchTerm } from "../redux/CartSlice"; // Import the action to set search term
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -72,14 +72,14 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <a href="/cart" aria-label="View Cart" className="relative">
-            <FaShoppingCart className="text-xl" />
-            {totalCartItems > 0 && (
-              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                {totalCartItems}
-              </span>
-            )}
-          </a>
+        <Link to="/cart" aria-label="View Cart" className="relative">
+  <FaShoppingCart className="text-xl" />
+  {totalCartItems > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+      {totalCartItems}
+    </span>
+  )}
+</Link>
           <button className="hidden md:block">Login | Register</button>
           <button className="block md:hidden" aria-label="User Menu">
             <FaUser className="text-xl" />

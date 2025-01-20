@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
+  console.log("Cart Items: ", cartItems);
   const dispatch = useDispatch();
 
   const totalRevenue = cartItems.reduce(

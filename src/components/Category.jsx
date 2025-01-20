@@ -24,7 +24,7 @@ const imageArray = [
 ];
 
 const Category = () => {
-  const searchTerm = useSelector((state) => state.cart.searchTerm);  // Access the search term from Redux
+  const searchTerm = useSelector((state) => state.cart.searchTerm);  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -34,7 +34,7 @@ const Category = () => {
       <div className="flex flex-wrap justify-between p-6 space-y-4 md:space-y-0 md:space-x-0">
         {imageArray
           .filter((item) =>
-            item.title.toLowerCase().includes(searchTerm.toLowerCase())  // Filter based on searchTerm
+            item.title.toLowerCase().includes(searchTerm.toLowerCase()) 
           )
           .map((item, index) => (
             <div
